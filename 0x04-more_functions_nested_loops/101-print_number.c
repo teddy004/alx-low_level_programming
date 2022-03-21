@@ -9,7 +9,7 @@
 void print_number(int n)
 {
 	int i, d, p, f;
-	long j;
+	int j;
 	char num[1000];
 
 	p = 0;
