@@ -7,16 +7,17 @@
  *
  * Return: Always 0.
  */
-int main(int ac, char *av[])
+int main(void)
 {
     char *s;
 
-    s = argstostr(ac, av);
+    s = _strdup("Holberton");
     if (s == NULL)
     {
+        printf("failed to allocate memory\n");
         return (1);
     }
-    printf("%s", s);
+    printf("%s\n", s);
     free(s);
     return (0);
 }
