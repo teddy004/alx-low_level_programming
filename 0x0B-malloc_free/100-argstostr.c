@@ -51,5 +51,9 @@ char *argstostr(int ac, char **av)
 	k++;
 	s[k] = '\0';
 	return (s);
+<<<<<<< HEAD
 }
 
+=======
+}
+>>>>>>> d8e7b4cee82f43ada648205edf5bf87a06a8f2a0
