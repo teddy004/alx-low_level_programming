@@ -1,7 +1,6 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-
 /**
  * check_num - function to check the string for number
  * @st: string being passed
@@ -32,7 +31,6 @@ unsigned int string_length(char *str)
 		a++;
 	return (a);
 }
-
 /**
  * print_string - function to print string
  * @st: string to print
@@ -53,7 +51,6 @@ void print_string(char *st)
 	}
 	_putchar('\n');
 }
-
 /**
  * _calloc - function for memory
  * @number: the number
@@ -74,7 +71,6 @@ void *_calloc(unsigned int number, unsigned int size)
 		p[a] = 0;
 	return (p);
 }
-
 /**
  * main - function to multiply
  * @argc: number of arguments passed
