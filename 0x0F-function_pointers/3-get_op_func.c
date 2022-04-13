@@ -1,12 +1,11 @@
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
+#include "function_pointers.h"
 #include "3-calc.h"
+
 /**
-* get_op_func - function that performs simple operations
-* @s: the operator passed as argument to the program
-* Return: pointer to the function
-**/
+ * get_op_func - a pointer to the function that corresponds to the op as a parm
+ * @s: operator passed as argument
+ * Return: Always 0 for sucess
+ */
 int (*get_op_func(char *s))(int, int)
 {
 	op_t ops[] = {
@@ -17,16 +16,14 @@ int (*get_op_func(char *s))(int, int)
 		{"%", op_mod},
 		{NULL, NULL}
 	};
-	int i = 0;
+	int i;
 
-	while (ops[i].op != NULL)
+	while (i < 5)
 	{
-		if (strcmp(ops[i].op, s) == 0)
-		{
+		if (*(ops[i].op) == *s && s[0] != '\0')
 			return (ops[i].f);
-		}
 		i++;
 	}
-	printf("Error\n");
-	exit(99);
+	i = 0;
+	return (0);
 }
